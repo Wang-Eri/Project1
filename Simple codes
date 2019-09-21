@@ -1,0 +1,185 @@
+Set clear = Workbooks("students.csv").Worksheets("students")
+    Dim CP102, CP104, CP212, CP411, PC120, PC131, PC141, AS101 As Worksheet
+    Dim ws As Worksheet
+    
+    'Delete sheets for each courses if they have already exist
+    For Each ws In Worksheets
+        If ws.Name <> "Sheet1" Then
+            ws.Delete
+        End If
+    Next
+    'Create the worksheet for CP102
+    Set CP102 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With CP102
+        .Name = "CP102"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+        
+    'Create the worksheet for CP104
+    Set CP104 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With CP104
+        .Name = "CP104"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for CP212
+    Set CP212 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With CP212
+        .Name = "CP212"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for CP411
+    Set CP411 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With CP411
+        .Name = "CP411"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for PC120
+    Set PC120 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With PC120
+        .Name = "PC120"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for PC131
+    Set PC131 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With PC131
+        .Name = "PC131"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for PC141
+    Set PC141 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With PC141
+        .Name = "PC141"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Create the worksheet for AS101
+    Set AS101 = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.count))
+    With AS101
+        .Name = "AS101"
+        .Range("A1").Value = "First Name"
+        .Range("B1").Value = "Last Name"
+        .Range("C1").Value = "Final Grades"
+    End With
+    
+    'Activate the file "student" for later use
+    clear.Activate
+    Dim cp12, cp14, cp2, cp4, pc12, pc13, pc14, as1 As Range
+    Dim w, k, a, b, c, d, e, f, g, h, j, l, m, n, o, p As Integer
+    w = 0
+    k = 0
+    a = 0
+    b = 0
+    c = 0
+    d = 0
+    e = 0
+    f = 0
+    g = 0
+    h = 0
+    j = 0
+    l = 0
+    m = 0
+    n = 0
+    o = 0
+    p = 0
+    'insert value for each student's name into each course worksheet
+    For Each cp12 In Range("D2", Range("D2").End(xlDown))
+        If cp12 <> "" And cp12.Value = "CP102" Then
+            CP102.Range("A2").Offset(w, 0).Value = Range("A2").Offset(k, 0)
+            CP102.Range("B2").Offset(w, 0).Value = Range("B2").Offset(k, 0)
+            CP102.Range("C2").Offset(w, 0).Value = 0.05 * (Range("E2").Offset(k, 0) + Range("F2").Offset(k, 0) + Range("G2").Offset(k, 0) + Range("H2").Offset(k, 0)) + 0.3 * Range("I2").Offset(k, 0) + 0.5 * Range("J2").Offset(k, 0)
+
+            w = w + 1
+        End If
+        k = k + 1
+    Next cp12
+    For Each cp14 In Range("D2", Range("D2").End(xlDown))
+        If cp14 <> "" And cp14.Value = "CP212" Then
+            CP104.Range("A2").Offset(a, 0).Value = Range("A2").Offset(b, 0)
+            CP104.Range("B2").Offset(a, 0).Value = Range("B2").Offset(b, 0)
+            CP104.Range("C2").Offset(a, 0).Value = 0.05 * (Range("E2").Offset(b, 0) + Range("F2").Offset(b, 0) + Range("G2").Offset(b, 0) + Range("H2").Offset(b, 0)) + 0.3 * Range("I2").Offset(b, 0) + 0.5 * Range("J2").Offset(b, 0)
+
+            a = a + 1
+        End If
+        b = b + 1
+    Next cp14
+    For Each cp2 In Range("D2", Range("D2").End(xlDown))
+        If cp2 <> "" And cp2.Value = "CP212" Then
+            CP212.Range("A2").Offset(c, 0).Value = Range("A2").Offset(d, 0)
+            CP212.Range("B2").Offset(c, 0).Value = Range("B2").Offset(d, 0)
+            CP212.Range("C2").Offset(c, 0).Value = 0.05 * (Range("E2").Offset(d, 0) + Range("F2").Offset(d, 0) + Range("G2").Offset(d, 0) + Range("H2").Offset(d, 0)) + 0.3 * Range("I2").Offset(d, 0) + 0.5 * Range("J2").Offset(d, 0)
+
+            c = c + 1
+        End If
+        d = d + 1
+    Next cp2
+    For Each cp4 In Range("D2", Range("D2").End(xlDown))
+        If cp4 <> "" And cp4.Value = "CP411" Then
+            CP411.Range("A2").Offset(e, 0).Value = Range("A2").Offset(f, 0)
+            CP411.Range("B2").Offset(e, 0).Value = Range("B2").Offset(f, 0)
+            CP411.Range("C2").Offset(e, 0).Value = 0.05 * (Range("E2").Offset(f, 0) + Range("F2").Offset(f, 0) + Range("G2").Offset(f, 0) + Range("H2").Offset(f, 0)) + 0.3 * Range("I2").Offset(f, 0) + 0.5 * Range("J2").Offset(f, 0)
+
+            e = e + 1
+        End If
+        f = f + 1
+    Next cp4
+    For Each pc12 In Range("D2", Range("D2").End(xlDown))
+        If pc12 <> "" And pc12.Value = "PC120" Then
+            PC120.Range("A2").Offset(g, 0).Value = Range("A2").Offset(h, 0)
+            PC120.Range("B2").Offset(g, 0).Value = Range("B2").Offset(h, 0)
+            PC120.Range("C2").Offset(g, 0).Value = 0.05 * (Range("E2").Offset(h, 0) + Range("F2").Offset(h, 0) + Range("G2").Offset(h, 0) + Range("H2").Offset(h, 0)) + 0.3 * Range("I2").Offset(h, 0) + 0.5 * Range("J2").Offset(h, 0)
+
+            g = g + 1
+        End If
+        h = h + 1
+    Next pc12
+    For Each pc13 In Range("D2", Range("D2").End(xlDown))
+        If pc13 <> "" And pc13.Value = "PC131" Then
+            PC131.Range("A2").Offset(j, 0).Value = Range("A2").Offset(l, 0)
+            PC131.Range("B2").Offset(j, 0).Value = Range("B2").Offset(l, 0)
+            PC131.Range("C2").Offset(j, 0).Value = 0.05 * (Range("E2").Offset(l, 0) + Range("F2").Offset(l, 0) + Range("G2").Offset(l, 0) + Range("H2").Offset(l, 0)) + 0.3 * Range("I2").Offset(l, 0) + 0.5 * Range("J2").Offset(l, 0)
+            j = j + 1
+        End If
+        l = l + 1
+    Next pc13
+    For Each pc14 In Range("D2", Range("D2").End(xlDown))
+        If pc14 <> "" And pc14.Value = "PC141" Then
+            PC141.Range("A2").Offset(m, 0).Value = Range("A2").Offset(n, 0)
+            PC141.Range("B2").Offset(m, 0).Value = Range("B2").Offset(n, 0)
+            PC141.Range("C2").Offset(m, 0).Value = 0.05 * (Range("E2").Offset(n, 0) + Range("F2").Offset(n, 0) + Range("G2").Offset(n, 0) + Range("H2").Offset(n, 0)) + 0.3 * Range("I2").Offset(n, 0) + 0.5 * Range("J2").Offset(n, 0)
+
+            m = m + 1
+        End If
+        n = n + 1
+    Next pc14
+    
+    For Each as1 In Range("D2", Range("D2").End(xlDown))
+        If as1 <> "" And as1.Value = "AS101" Then
+            AS101.Range("A2").Offset(o, 0).Value = Range("A2").Offset(p, 0)
+            AS101.Range("B2").Offset(o, 0).Value = Range("B2").Offset(p, 0)
+            AS101.Range("C2").Offset(o, 0).Value = 0.05 * (Range("E2").Offset(p, 0) + Range("F2").Offset(p, 0) + Range("G2").Offset(p, 0) + Range("H2").Offset(p, 0)) + 0.3 * Range("I2").Offset(p, 0) + 0.5 * Range("J2").Offset(p, 0)
+
+            o = o + 1
+        End If
+         p = p + 1
+      Next as1
+    End If
+    
